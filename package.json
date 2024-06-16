@@ -1,0 +1,19 @@
+{
+  "name": "cypress-bsc",
+  "version": "1.0.0",
+  "description": "Basic cypress PO project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "cypress-bsc"
+  },
+  "author": "KamilG7",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.11.0",
+    "node.js": "^0.0.1-security"
+  }
+}
