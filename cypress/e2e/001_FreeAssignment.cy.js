@@ -10,15 +10,13 @@ const assignment = new Assignment()
 describe('Tests related to "Free Assignment" option', () => {
 
 
-  it('Applying for free assignment - navogating to form [Id_1002]', () => {    
+  it('Applying for free assignment - navigating to form [Id_1002]', () => {    
     cy.visit('')
-    homePage.assignmentTab.should("have.attr", "href", "https://forms.clickup.com/2314027/p/f/26ktb-6387/56LKNUZ9BDYXSC73SY/unlock-your-automation-potentialwitha-free-framework-assessment").click()
-     })
-    
-
+    homePage.assignmentTab.should("have.attr", "href", homePage.formLink).click()
+     })  
 
   it('Applying for free assignment - filling form [Id_1002]', () => {    
-    cy.visit("https://forms.clickup.com/2314027/p/f/26ktb-6387/56LKNUZ9BDYXSC73SY/unlock-your-automation-potentialwitha-free-framework-assessment")      
+    cy.visit(homePage.formLink)      
       assignment.nameInput.type(user.name).should('have.value', user.name)
       assignment.emailInput.type(user.email).should('have.value', user.email)
       assignment.positionInput.type(user.position).should('have.value', user.position)

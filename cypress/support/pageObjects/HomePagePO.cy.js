@@ -18,6 +18,9 @@ class HomePage {
         return cy.contains("Free Courses")
     }
 
+    get formLink() {
+        return "https://forms.clickup.com/2314027/p/f/26ktb-6387/56LKNUZ9BDYXSC73SY/unlock-your-automation-potentialwitha-free-framework-assessment"
+    }
 }
 
 export default HomePage
