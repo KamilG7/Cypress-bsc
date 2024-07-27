@@ -3,6 +3,10 @@
 import registrationLoginData from "../fixtures/registrationLoginData.json" 
 import RegistrationPage from "../support/pageObjects/RegistrationPO.cy.js"
 const registrationPage = new RegistrationPage()
+import PostLoginPage from "../support/pageObjects/PostLoginPO.cy.js"
+const postLoginPage = new PostLoginPage()
+import PostLogoutPage from "../support/pageObjects/PostLogoutPO.cy.js"
+const postLogoutPage = new PostLogoutPage()
 
 
 describe('"Registration" related tests', () => {
@@ -16,10 +20,9 @@ describe('"Registration" related tests', () => {
       registrationPage.passwordInput.type(registrationLoginData.password).should('have.value', registrationLoginData.password)
       registrationPage.termsCheckbox.click().should("be.checked")
       registrationPage.submitButton.click()
-      registrationPage.registrationSuccessfulLocator.should("be.visible")
-      registrationPage.dropdownMenu.click()
-      registrationPage.signOutButton.click()
-      registrationPage.signOutConfirmation.should("be.visible")
-
+      postLoginPage.loggedInConfirmationLocator.should("be.visible")
+      postLoginPage.dropdownMenu.click()
+      postLoginPage.signOutButton.click()
+      postLogoutPage.signOutConfirmation.should("be.visible")
        })
     })
