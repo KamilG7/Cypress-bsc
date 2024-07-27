@@ -39,8 +39,21 @@ class RegistrationPage {
     }
 
     get registrationSuccessfulLocator() {
-        return
+        return cy.get("#category-name")
     }
+
+    get dropdownMenu() {
+        return cy.get("button[class='dropdown__toggle-button']")
+    }
+
+    get signOutButton() {
+        return cy.contains("Sign Out")
+    }
+
+    get signOutConfirmation() {
+        return cy.get("a").contains("Sign In")
+    }
+
 }
 
 export default RegistrationPage
