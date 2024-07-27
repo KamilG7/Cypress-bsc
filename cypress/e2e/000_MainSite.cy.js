@@ -11,4 +11,10 @@ describe('Tests related to "Main Site"', () => {
       cy.visit('')
       homePage.confirmationLocator.should("be.visible")
        })
+
+    it('It should be possible to add cookier [id_1016]', () => {
+      cy.visit('')
+      cy.setCookie('cutiepie', '12345ok')
+      cy.getCookie('cutiepie').should('exist')
+    })
     })

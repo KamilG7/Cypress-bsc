@@ -66,6 +66,22 @@ class RegistrationPage {
         return cy.get("li").contains("The username and/or password entered are incorrect, please try again")
     }
 
+    get termsOfUse() {
+        return cy.get("a").contains("Terms of Use")
+    }
+
+    get privayPolicy() {
+        return cy.get("a").contains("Customer Privacy Policy")
+    }
+
+    get termsOfUseConfirmation() {
+        return cy.get("span").contains("SERVICE AGREEMENT AND TERMS OF USE")
+    }
+
+    get privacyPolicyConfirmation() {
+        return cy.get("h3"). contains("What kind of data is processed?")
+    }
+
 }
 
 export default RegistrationPage

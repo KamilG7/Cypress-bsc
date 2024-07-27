@@ -11,6 +11,18 @@ const postLogoutPage = new PostLogoutPage()
 
 describe('"Registration" related tests', () => {
 
+    it('"Terms of Use" can by displayed [id_1012]', () => {    
+        cy.visit(registrationPage.formLink)
+        registrationPage.termsOfUse.invoke("removeAttr", "target").click()
+        registrationPage.termsOfUseConfirmation.should("be.visible")
+    })
+
+    it('"Privacy Policy" can be displayed [id_1013]', () => {    
+        cy.visit(registrationPage.formLink)
+        registrationPage.privacyPolicy.invoke("removeAttr", "target").click()
+        registrationPage.privacyPolicyConfirmation.should("be.visible")   
+    })
+
 
     it('Correct registration test [id_1003]', () => {    
       cy.visit(registrationPage.formLink)
@@ -97,4 +109,6 @@ it('Registration shpuld fail if "Email" already in databse [id_1014]', () => {
     registrationPage.errorUsedEmail.should("be.visible")
 
 })
+
+
 })
