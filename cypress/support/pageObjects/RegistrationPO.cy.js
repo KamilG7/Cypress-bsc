@@ -38,6 +38,33 @@ class RegistrationPage {
         return "https://courses.ultimateqa.com/users/sign_up"
     }
 
+    get errorNoName() {
+        return cy.get("li").contains("First name can't be blank")
+    }
+
+    get errorNoLastName() {
+        return cy.get("li").contains("Last name can't be blank")
+    }
+
+    get errorNoEmail() {
+        return cy.get("li").contains("Email can't be blank")
+    }
+
+    get errorIncorrectEmail() {
+        return cy.get("li").contains("Email is invalid")
+    }
+
+    get errorWeakPassword() {
+        return cy.get("li").contains("Password must be at least 8 characters")
+    }
+
+    get errorEmptyForm() {
+        return cy.get("li").contains("First name can't be blank")
+    }
+
+    get errorUsedEmail() {
+        return cy.get("li").contains("The username and/or password entered are incorrect, please try again")
+    }
 
 }
 

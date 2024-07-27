@@ -9,10 +9,10 @@ import PostLogoutPage from "../support/pageObjects/PostLogoutPO.cy.js"
 const postLogoutPage = new PostLogoutPage()
 
 
-describe('"Registration" related tests', () => {
+describe('"Login" related tests', () => {
 
 
-    it('Correct registration test [id_1003]', () => {    
+    it('Correct Login test [id_1004]', () => {    
       cy.visit(loginPage.formLink)
 
       loginPage.emailInput.type(registrationLoginData.email)

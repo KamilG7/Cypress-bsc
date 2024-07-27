@@ -1,6 +1,8 @@
 {
-    "FirstName": "Zbigniewwwwww",
-    "LastName": "Paletaawwww",
-    "email": "zbigniaewwwww@paleta.pl",
-    "password": "zbignieww123@"
+    "FirstName": "Zbigniewwwwwww",
+    "LastName": "Paletaawwwww",
+    "email": "zbigniaewwwwww@paleta.pl",
+    "password": "zbigniewww123@",
+    "incorrectEmail": "ok@ok",
+    "weakPassword": "ok"
   }
